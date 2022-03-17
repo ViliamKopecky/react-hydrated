@@ -1,0 +1,50 @@
+{
+	"name": "react-hydrated",
+	"version": "1.0.0",
+	"description": "React helpers for working with hydrated server-side and client-side issues.",
+	"license": "MIT",
+	"main": "dist/index.js",
+	"module": "dist/index.modern.js",
+	"source": "src/index.tsx",
+	"engines": {
+		"node": ">=10"
+	},
+	"scripts": {
+		"microbundle:config": "microbundle --globals react=React --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --external react --format modern,cjs",
+		"build": "npm run microbundle:config",
+		"dev": "npm run microbundle:config --no-compress watch",
+		"prepare": "npm run build",
+		"check": "tsc --noEmit && eslint .",
+		"fix": "eslint --fix ."
+	},
+	"peerDependencies": {
+		"next": "11 || 12",
+		"react": "^17.0.0"
+	},
+	"devDependencies": {
+		"@types/react": "^17.0.40",
+		"@types/react-dom": "^17.0.13",
+		"@typescript-eslint/eslint-plugin": "^5.15.0",
+		"@typescript-eslint/parser": "^5.15.0",
+		"eslint": "^8.11.0",
+		"eslint-config-next": "^12.1.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-jsx-a11y": "^6.5.1",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-react": "^7.29.4",
+		"eslint-plugin-react-hooks": "^4.3.0",
+		"microbundle": "^0.14.2",
+		"next": "^12.0.10",
+		"prettier": "^2.0.4",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"typescript": "^4.6.2"
+	},
+	"files": [
+		"dist"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/viliamkopecky/react-hydrated.git"
+	}
+}
