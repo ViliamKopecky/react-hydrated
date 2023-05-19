@@ -1,6 +1,6 @@
 {
 	"name": "react-hydrated",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "React helpers for working with hydrated server-side and client-side issues.",
 	"license": "MIT",
 	"main": "dist/index.js",
